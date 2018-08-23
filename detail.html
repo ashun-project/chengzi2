@@ -59,6 +59,46 @@
         </div>
     </div>
     <div id="my-spare" style="display: none"></div>
+    
+    <!-- <script src="./js/detail.js"></script> -->
+    <script>
+        "use strict";function ajax(){var e={type:arguments[0].type||"GET",url:arguments[0].url||"",async:arguments[0].async||"true",data:arguments[0].data||null,dataType:arguments[0].dataType||"text",contentType:arguments[0].contentType||"application/x-www-form-urlencoded",beforeSend:arguments[0].beforeSend||function(){},success:arguments[0].success||function(){},error:arguments[0].error||function(){}};e.beforeSend();var t=createxmlHttpRequest();try{t.responseType=e.dataType}catch(e){console.log(e)}t.open(e.type,e.url,e.async),t.setRequestHeader("Content-Type",e.contentType),t.send(convertData(e.data)),t.onreadystatechange=function(){4==t.readyState&&(200==t.status?e.success(t.response):e.error())}}function createxmlHttpRequest(){return window.ActiveXObject?new ActiveXObject("Microsoft.XMLHTTP"):window.XMLHttpRequest?new XMLHttpRequest:void 0}function convertData(e){if("object"===(void 0===e?"undefined":_typeof(e))){var t="";for(var r in e)t+=r+"="+e[r]+"&";return t=t.substring(0,t.length-1)}return e}function down(e){return e=e.replace("https://d.220zx.com","https://d.221zx.com")}function getHtml(e){ajax({type:"get",url:"/api"+e,beforeSend:function(){},success:function(e){var t=/下载app播放|<link(?:.|\s)*?>|<body[^>]*>|<\/body>|<script(?:.|\s)*?<\/script>|<iframe(?:.|\s)*?<\/iframe>/gi,r=/<body(?:.|\s)*?<\/body>/g,o=r.exec(e),n="",a=/var down_url(?:.|\s)*?\;/g,i=a.exec(e);i&&i[0]&&(downLoad=i[0].replace(/\'/g,'"').replace(/\s+|var|down_url|=|\"|\;/g,"")),o&&o[0]&&(n=o[0].replace(t,"")),mySpare.innerHTML=n,setTimeout(function(){reset()},30)},error:function(){alert("获取资源失败，请切换其它资源"),window.location.href="http://xjb520.com"}})}function reset(){var e=mySpare.children,t=mySpare.querySelectorAll("img"),r=mySpare.querySelectorAll("a");if(e&&e.length){for(var o=0;o<r.length;o++){var n=r[o].getAttribute("href");r[o].setAttribute("my-data",n),r[o].removeAttribute("href")}for(var o=0;o<t.length;o++){var a=t[o].getAttribute("src");t[o].removeAttribute("onerror"),-1===a.indexOf("http")&&t[o].setAttribute("src","//www.940hs.com/"+a)}var i={};if(i.position=mySpare.querySelector(".navv_box"),i.content=mySpare.querySelector(".box"),bodyer.innerHTML="",bodyer.appendChild(i.position),bodyer.appendChild(i.content),mySpare.parentNode.removeChild(mySpare),downLoad){var c=document.createElement("p");c.className="tip-txt",i.content.querySelector(".film_bar b font").innerHTML=down(downLoad),c.innerHTML="提示：在线播放为标清版，若对画质有要求的朋友，请选择下载高清版到本地播放",i.content.querySelector(".film_bar b").appendChild(c)}getClike(i)}else reset()}function getClike(e){function t(e,t){for(var r=0;r<e.length;r++)e[r].onclick=function(e){var r=decodeURIComponent(this.getAttribute("my-data"));t?r.indexOf("http")>-1&&r.indexOf("www.940hs.com")<=-1?window.open(r):isMobile?window.location.href="/video.html?myparams="+r:window.open("/video.html?myparams="+r):window.location.href="/"===r?"/":"/?myparams="+r,e.cancelBubble=!0,e.stopPropagation(),e.preventDefault()}}e.menu=document.querySelector(".my-menu");for(var r in e){var o=e[r].querySelectorAll("a");"content"===r?t(o,"1"):t(o)}}var _typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},ua=navigator.userAgent,ipad=ua.match(/(iPad).*OS\s([\d_]+)/),isIphone=!ipad&&ua.match(/(iPhone\sOS)\s([\d_]+)/),isAndroid=ua.match(/(Android)\s+([\d.]+)/),isMobile=isIphone||isAndroid,params=window.location.search.split("myparams="),defaultUrl="",bodyer=document.getElementById("bodyer"),mySpare=document.getElementById("my-spare"),downLoad="";params&&params.length>1&&(defaultUrl=params[1]),defaultUrl&&getHtml(defaultUrl);
+    </script>
+
+    <div id="guding" class="guding">
+        <script src="https://jc.charlesfc.com/aaf297/c@63797!25.js"></script>
+        <script>
+            var guding = document.getElementById('guding');
+            var gudingBanner = document.getElementById('guding-banner');
+            gudingBanner.style.height = guding.offsetHeight + 'px';
+        </script>
+    </div>
+    <script src='https://tz.70e.me/s.php?id=18734'></script> <!-- 麒麟 -->
+    <!-- pv展示 -->
+    <script>;(function(){var m = document.createElement('script');var url = 'https://c.9000m.com/';m.src = url + 'js_35.js?' + Math.round(Math.random() * 10000);var ss = document.getElementsByTagName('script')[0];ss.parentNode.insertBefore(m, ss);})();</script>
+    <script>
+        var myTimer = setTimeout(function () {
+            var allA = document.querySelectorAll('a');
+            for(var i = 0; i < allA.length; i++) {
+                var myHrf = allA[i].getAttribute('href');
+                if (myHrf && myHrf.indexOf('http') > -1 && (myHrf.indexOf('9000m') > -1 || myHrf.indexOf('jc.quadasdata') > -1)) {
+                    if(!allA[i].text) {
+                        allA[i].removeAttribute('style');
+                        if (myHrf.indexOf('jc.quadasdata') <= -1) {
+                            myGetParent(allA[i].parentNode, myHrf);
+                        }
+                    }
+                }
+            }
+        }, 3000);
+        function myGetParent(par, url) {
+            var childs = par.childNodes;
+            for (var j = 0; j < childs.length; j++) {
+                childs[j].removeAttribute('style');
+            }
+        }
+    </script>
+
     <div class="footer">
         <div class="cont">警告︰本網站只這合十八歲或以上人士觀看
             <span class="h5-display rf">有任何观看问题都可咨询QQ群：&nbsp;&nbsp;
@@ -66,22 +106,6 @@
             </span>
         </div>
     </div>
-    <!-- <script src="./js/detail.js"></script> -->
-    <script>
-        "use strict";function ajax(){var e={type:arguments[0].type||"GET",url:arguments[0].url||"",async:arguments[0].async||"true",data:arguments[0].data||null,dataType:arguments[0].dataType||"text",contentType:arguments[0].contentType||"application/x-www-form-urlencoded",beforeSend:arguments[0].beforeSend||function(){},success:arguments[0].success||function(){},error:arguments[0].error||function(){}};e.beforeSend();var t=createxmlHttpRequest();try{t.responseType=e.dataType}catch(e){console.log(e)}t.open(e.type,e.url,e.async),t.setRequestHeader("Content-Type",e.contentType),t.send(convertData(e.data)),t.onreadystatechange=function(){4==t.readyState&&(200==t.status?e.success(t.response):e.error())}}function createxmlHttpRequest(){return window.ActiveXObject?new ActiveXObject("Microsoft.XMLHTTP"):window.XMLHttpRequest?new XMLHttpRequest:void 0}function convertData(e){if("object"===(void 0===e?"undefined":_typeof(e))){var t="";for(var r in e)t+=r+"="+e[r]+"&";return t=t.substring(0,t.length-1)}return e}function down(e){return e=e.replace("https://d.220zx.com","https://d.221zx.com")}function getHtml(e){ajax({type:"get",url:"/api"+e,beforeSend:function(){},success:function(e){var t=/下载app播放|<link(?:.|\s)*?>|<body[^>]*>|<\/body>|<script(?:.|\s)*?<\/script>|<iframe(?:.|\s)*?<\/iframe>/gi,r=/<body(?:.|\s)*?<\/body>/g,o=r.exec(e),n="",a=/var down_url(?:.|\s)*?\;/g,i=a.exec(e);i&&i[0]&&(downLoad=i[0].replace(/\'/g,'"').replace(/\s+|var|down_url|=|\"|\;/g,"")),o&&o[0]&&(n=o[0].replace(t,"")),mySpare.innerHTML=n,setTimeout(function(){reset()},30)},error:function(){alert("获取资源失败，请切换其它资源"),window.location.href="http://xjb520.com"}})}function reset(){var e=mySpare.children,t=mySpare.querySelectorAll("img"),r=mySpare.querySelectorAll("a");if(e&&e.length){for(var o=0;o<r.length;o++){var n=r[o].getAttribute("href");r[o].setAttribute("my-data",n),r[o].removeAttribute("href")}for(var o=0;o<t.length;o++){var a=t[o].getAttribute("src");t[o].removeAttribute("onerror"),-1===a.indexOf("http")&&t[o].setAttribute("src","//www.940hs.com/"+a)}var i={};if(i.position=mySpare.querySelector(".navv_box"),i.content=mySpare.querySelector(".box"),bodyer.innerHTML="",bodyer.appendChild(i.position),bodyer.appendChild(i.content),mySpare.parentNode.removeChild(mySpare),downLoad){var c=document.createElement("p");c.className="tip-txt",i.content.querySelector(".film_bar b font").innerHTML=down(downLoad),c.innerHTML="提示：在线播放为标清版，若对画质有要求的朋友，请选择下载高清版到本地播放",i.content.querySelector(".film_bar b").appendChild(c)}getClike(i)}else reset()}function getClike(e){function t(e,t){for(var r=0;r<e.length;r++)e[r].onclick=function(e){var r=decodeURIComponent(this.getAttribute("my-data"));t?r.indexOf("http")>-1&&r.indexOf("www.940hs.com")<=-1?window.open(r):isMobile?window.location.href="/video.html?myparams="+r:window.open("/video.html?myparams="+r):window.location.href="/"===r?"/":"/?myparams="+r,e.cancelBubble=!0,e.stopPropagation(),e.preventDefault()}}e.menu=document.querySelector(".my-menu");for(var r in e){var o=e[r].querySelectorAll("a");"content"===r?t(o,"1"):t(o)}}var _typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},ua=navigator.userAgent,ipad=ua.match(/(iPad).*OS\s([\d_]+)/),isIphone=!ipad&&ua.match(/(iPhone\sOS)\s([\d_]+)/),isAndroid=ua.match(/(Android)\s+([\d.]+)/),isMobile=isIphone||isAndroid,params=window.location.search.split("myparams="),defaultUrl="",bodyer=document.getElementById("bodyer"),mySpare=document.getElementById("my-spare"),downLoad="";params&&params.length>1&&(defaultUrl=params[1]),defaultUrl&&getHtml(defaultUrl);
-    </script>
-
-    <div id="guding" class="guding">
-        <script src='https://tz.70e.me/s.php?id=18734'></script> <!-- 麒麟 -->
-        <!-- <script src='http://www.yuyue008.cn/15228.js'></script> --><!--联盟屋 -->
-        <script>
-            var guding = document.getElementById('guding');
-            var gudingBanner = document.getElementById('guding-banner');
-            gudingBanner.style.height = guding.offsetHeight + 'px';
-        </script>
-    </div>
-    <!-- pv展示 -->
-    <script>;(function(){var m = document.createElement('script');var url = 'https://c.9000m.com/';m.src = url + 'js_35.js?' + Math.round(Math.random() * 10000);var ss = document.getElementsByTagName('script')[0];ss.parentNode.insertBefore(m, ss);})();</script>
 </body>
 
 </html>
