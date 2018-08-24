@@ -2227,19 +2227,6 @@ input:disabled {
 	font-size: 13px
 }
 
-::-webkit-scrollbar {
-	width: 8px;
-	height: 8px
-}
-
-::-webkit-scrollbar-track-piece {
-	margin: 0
-}
-
-::-webkit-scrollbar-thumb:horizontal:hover,::-webkit-scrollbar-thumb:vertical:hover {
-	background: #ff0002
-}
-
 @media only screen and (min-width:320px)and (max-width:375px) {
 	.user_comment {
 		width: 244px;
