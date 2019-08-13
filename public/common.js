@@ -63,7 +63,7 @@ function getFriendly () {
             var alist = '<div class="friendly">';
             var style = '<style>.friendly{box-sizing: border-box;max-width:960px;width:100%;margin: 0 auto;padding: 5px;}.friendly a{display: inline-block;padding: 5px;}</style>'
             for(var i = 0; i < data.length; i++) {
-                alist += '<a href="'+ data[i].url +'">'+ data[i].name +'</a>'
+                alist += '<a href="'+ data[i].url +'" target="_blank">'+ data[i].name +'</a>'
             }
             alist += '</div>';
             $('body').append(style);
